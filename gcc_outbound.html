@@ -35,12 +35,14 @@ function oa(urls){
     setTimeout(function(){
       var a=document.createElement('a');
       a.href=u;
-      a.target='_blank';
       document.body.appendChild(a);
       a.click();
       setTimeout(function(){try{document.body.removeChild(a);}catch(e){}},300);
     },i*1800);
   });
+}
+function oaLi(urls){
+  urls.forEach(function(u){window.open(u,'_blank');});
 }
 
 var data=[
@@ -167,7 +169,7 @@ data.forEach(function(co){
   out+='<h2><a href="'+he(co.url)+'" target="_blank">'+co.name+'</a>&nbsp; <small>'+co.ind+' &mdash; '+co.desc+'</small></h2>';
   out+='<div class="bulk">';
   out+='<button onclick="oa('+eJ+')">Open all emails ('+ems.length+')</button>';
-  out+='<button onclick="oa('+lJ+')">Open all LinkedIn ('+lis.length+')</button>';
+  out+='<button onclick="oaLi('+lJ+')">Open all LinkedIn ('+lis.length+')</button>';
   out+='</div>';
   out+='<table><tr><th>Name</th><th>Title</th><th>Email</th><th>Links</th></tr>';
   co.contacts.forEach(function(c){
