@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GCC Outbound — May 2026</title>
+<style>
+body{font-family:monospace;max-width:1020px;margin:40px auto;padding:0 24px;background:#fff;color:#111;}
+h1{font-size:18px;margin-bottom:4px;}
+h2{margin-top:44px;padding-bottom:5px;border-bottom:2px solid #111;font-size:15px;}
+h2 a{text-decoration:none;color:#111;}
+h2 small{font-weight:normal;font-size:12px;color:#555;}
+table{width:100%;border-collapse:collapse;margin:10px 0 4px;}
+th,td{border:1px solid #ccc;padding:6px 10px;font-size:13px;text-align:left;vertical-align:middle;}
+th{background:#f4f4f4;}
+.bulk{margin:10px 0 4px;}
+button{font-family:monospace;font-size:12px;padding:4px 10px;margin-right:8px;cursor:pointer;}
+.skipped{font-size:12px;color:#777;margin:5px 0 0;}
+.note{font-size:12px;color:#996600;margin-top:3px;}
+a{color:#005bb5;}
+</style>
+</head>
+<body>
+<h1>GCC Outbound — May 2026</h1>
+<script>
+function he(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;');}
+
+function mailto(email,first,co,ind,desc){
+  var subj='GrowthCurve Capital — '+co;
+  var body=first+', I lead '+ind+' investing at GrowthCurve Capital, and I think '+co+' and your data-rich '+desc+' is a great fit for us. Would love to connect—how about a quick call in the coming weeks?\nFor context, GrowthCurve is a growth-oriented private equity fund ($2B latest fund) built around investing in data-rich businesses where we can help unlock the value of that data and accelerate product velocity. We have an in-house team of AI / ML, data science, and product specialists that partner closely with our portfolio companies to help them leverage data to build new product capabilities, automations and AI agents, and optimize customer retention and acquisition.\nThanks,\nBen\n+1-973-978-8095\nben@growthcurvecapital.com';
+  return 'mailto:'+email+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+}
+
+function oa(urls){
+  urls.forEach(function(u,i){
+    setTimeout(function(){
+      var a=document.createElement('a');
+      a.href=u;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function(){try{document.body.removeChild(a);}catch(e){}},300);
+    },i*1800);
+  });
+}
+
+var data=[
+  {
+    name:'Sievo',url:'https://sievo.com',ind:'procurement tech',desc:'procurement analytics platform',
+    contacts:[
+      {first:'Sammeli',name:'Sammeli Sammalkorpi',title:'Co-Founder &amp; CEO',email:'sammeli.sammalkorpi@sievo.com',li:'https://www.linkedin.com/in/sammeli-sammalkorpi-96782/'},
+      {first:'Olli',name:'Olli Saksa',title:'CFO',email:'olli.saksa@sievo.com',li:'https://www.linkedin.com/in/ollisaksa/'}
+    ],
+    skipped:['Abby Hunt — former CEO'],
+    notes:['Only 2 qualifying contacts found; no current COO/CSO identified in PitchBook or public sources']
+  },
+  {
+    name:'Onfleet',url:'https://onfleet.com',ind:'logistics tech',desc:'last-mile delivery platform',
+    contacts:[
+      {first:'Khaled',name:'Khaled Naim',title:'CEO &amp; Co-Founder',email:'khaled@onfleet.com',li:'https://www.linkedin.com/in/knaim'},
+      {first:'Cory',name:'Cory Woolf',title:'CFO &amp; CCO',email:'cory@onfleet.com',li:'https://www.linkedin.com/in/cory-woolf'},
+      {first:'Andrew',name:'Andrew Travis',title:'COO, Security &amp; Privacy Officer',email:'andrew@onfleet.com',li:'https://www.linkedin.com/in/andrewctravis'},
+      {first:'Dave',name:'David Vetrano',title:'Co-Founder &amp; Chief Scientist',email:'dave@onfleet.com',li:'https://www.linkedin.com/in/davidvetrano/'},
+      {first:'Mikel',name:'Mikel Cavia',title:'Co-Founder &amp; Board Member',email:'mcavial@onfleet.com',li:'https://www.linkedin.com/in/euskode/'}
+    ],
+    skipped:[],
+    notes:[]
+  },
+  {
+    name:'Microblink',url:'https://microblink.com',ind:'identity and fraud tech',desc:'AI document scanning platform',
+    contacts:[
+      {first:'Hartley',name:'Hartley Thompson',title:'CEO',email:'hartley.thompson@microblink.com',li:'https://www.linkedin.com/in/hartleythompson/'},
+      {first:'Darren',name:'Darren Bassman',title:'Co-Founder &amp; Executive Chairman',email:'darren.bassman@microblink.com',li:'https://www.linkedin.com/in/darren-bassman-009a1321'}
+    ],
+    skipped:['Sasa Skevin — former COO/Founder','Jurica Cerovec — former CTO/Founder','Izet Žralović — former Founder','Damir Sabol — former Founder'],
+    notes:['Only 2 qualifying contacts found; no current CFO/COO identified in PitchBook or public sources']
+  },
+  {
+    name:'Jumio',url:'https://jumio.com',ind:'identity and fraud tech',desc:'AI identity verification platform',
+    contacts:[
+      {first:'Mark',name:'Mark Lorion',title:'CEO',email:'mark.lorion@jumio.com',li:'https://www.linkedin.com/in/marklorion'},
+      {first:'Igor',name:'Igor Beckerman',title:'CFO',email:'igor.beckerman@jumio.com',li:'https://www.linkedin.com/in/igor-beckerman-2a45a'}
+    ],
+    skipped:['Robert Prigge — former Co-Founder/CEO/President','Daniel Mattes — former Founder/CEO','Bala Kumar — current CPO (title not in target list)'],
+    notes:['Only 2 qualifying contacts found; no current COO/CSO identified in PitchBook or public sources']
+  },
+  {
+    name:'Sift',url:'https://sift.com',ind:'identity and fraud tech',desc:'digital fraud detection platform',
+    contacts:[
+      {first:'Marc',name:'Marc Friend',title:'CEO',email:'mfriend@sift.com',li:'https://www.linkedin.com/in/marcfriend'},
+      {first:'Ada',name:'Ada Johnson',title:'CFO',email:'ajohnson@sift.com',li:'https://www.linkedin.com/in/ada-johnson/'},
+      {first:'Ajay',name:'Ajay Gopal',title:'Chief Strategy Officer',email:'agopal@sift.com',li:'https://www.linkedin.com/in/ajzz/'}
+    ],
+    skipped:['Marc Olesen — former CEO','Kris Nagel — former CEO','Brandon Ballinger — former CTO/Founder'],
+    notes:['mfriend@sift.com is best-guess (PitchBook shows mfriend@rapidapi.com from prior role)','agopal@sift.com is best-guess (no email found in PitchBook)']
+  },
+  {
+    name:'ToolsGroup',url:'https://toolsgroup.com',ind:'logistics tech',desc:'supply chain planning platform',
+    contacts:[
+      {first:'Sean',name:'Sean Elliott',title:'CEO',email:'selliott@toolsgroup.com',li:'https://www.linkedin.com/in/sean-m-elliott'},
+      {first:'Howard',name:'Howard Reba',title:'CFO',email:'hreba@toolsgroup.com',li:'https://www.linkedin.com/in/howardreba'},
+      {first:'Eugenio',name:'Eugenio Cornacchia',title:'Co-Founder &amp; Chief Scientist',email:'ecornacchia@toolsgroup.com',li:'https://it.linkedin.com/in/eugeniocornacchia/it'}
+    ],
+    skipped:['Joseph Shamir — former Co-Founder/CEO','Inna Kuznetsova — former CEO'],
+    notes:[]
+  },
+  {
+    name:'1Kosmos',url:'https://1kosmos.com',ind:'identity and fraud tech',desc:'passwordless identity verification platform',
+    contacts:[
+      {first:'Hemen',name:'Hemen Vimadalal',title:'Co-Founder, CEO &amp; Board Member',email:'hemen@1kosmos.com',li:'https://www.linkedin.com/in/hemen-r-vimadalal-2561b02/'},
+      {first:'Adarsh',name:'Adarsh Mehra',title:'CFO',email:'adarsh.mehra@1kosmos.com',li:'https://www.linkedin.com/in/adarsh-mehra-a189587'},
+      {first:'Huzefa',name:'Huzefa Olia',title:'Co-Founder &amp; COO',email:'huzefa.olia@1kosmos.com',li:'https://www.linkedin.com/in/huzefaolia/'},
+      {first:'Siddharth',name:'Siddharth Gandhi',title:'Co-Founder &amp; COO-APAC',email:'siddharth.gandhi@1kosmos.com',li:'https://www.linkedin.com/in/siddharthgandhi/'},
+      {first:'Michael',name:'Michael Engle',title:'Co-Founder &amp; Chief Strategy Officer',email:'michael@1kosmos.com',li:'https://www.linkedin.com/in/englemichael'},
+      {first:'Rohan',name:'Rohan Pinto',title:'Co-Founder &amp; CTO',email:'rohan.pinto@1kosmos.com',li:'https://www.linkedin.com/in/rohanpinto/'}
+    ],
+    skipped:['Jash Choraria — former CEO','Jilbert Washten — former CFO'],
+    notes:[]
+  },
+  {
+    name:'ShipHero',url:'https://shiphero.com',ind:'logistics tech',desc:'ecommerce warehouse fulfillment platform',
+    contacts:[
+      {first:'Aaron',name:'Aaron Rubin',title:'Co-Founder &amp; CEO',email:'aaron@shiphero.com',li:'https://www.linkedin.com/in/aaronandml'},
+      {first:'Maggie',name:'Maggie Barnett',title:'COO &amp; Director of Strategic Partnerships',email:'maggie@shiphero.com',li:'https://www.linkedin.com/in/maggiembarnett'}
+    ],
+    skipped:['Jess Hansen — former CFO','Nicholas Richards — former Co-Founder/CRO'],
+    notes:['Only 2 qualifying contacts found; CFO position currently open/unfilled per public sources']
+  },
+  {
+    name:'PCS Software',url:'https://pcssoft.com',ind:'logistics tech',desc:'trucking transportation management platform',
+    contacts:[
+      {first:'Mark',name:'Mark Hill',title:'CEO',email:'markhill@pcssoft.com',li:'https://www.linkedin.com/in/markahill713/'},
+      {first:'Lori',name:'Lori Marwill',title:'CFO',email:'lori.marwill@pcssoft.com',li:'https://www.linkedin.com/in/lori-marwill-cpa-889b9b7/'},
+      {first:'Michael',name:'Michael Till',title:'Founder &amp; Board Member',email:'michael@pcssoft.com',li:'https://www.linkedin.com/in/michael-till-42b873265/'}
+    ],
+    skipped:['Chris Poelma — former CEO'],
+    notes:[]
+  },
+  {
+    name:'CertifID',url:'https://certifid.com',ind:'identity and fraud tech',desc:'real estate wire fraud protection',
+    contacts:[
+      {first:'Tyler',name:'Tyler Adams',title:'Co-Founder &amp; CEO',email:'tadams@certifid.com',li:'https://www.linkedin.com/in/tyler-adams-792a5615'},
+      {first:'Ben',name:'Ben Warren',title:'CFO',email:'bwarren@certifid.com',li:'https://www.linkedin.com/in/ben-warren-4a078924/'},
+      {first:'Thomas',name:'Thomas Cronkright II',title:'Co-Founder &amp; Executive Chairman',email:'tcronkright@certifid.com',li:'https://www.linkedin.com/in/thomas-cronkright-328a9818'}
+    ],
+    skipped:[],
+    notes:[]
+  },
+  {
+    name:'Argyle',url:'https://argyle.com',ind:'identity and fraud tech',desc:'payroll connectivity and verification',
+    contacts:[
+      {first:'Shmulik',name:'Shmulik Fishman',title:'Co-Founder, CEO &amp; Board Member',email:'shmulik@argyle.com',li:'https://www.linkedin.com/in/shmulik'},
+      {first:'Brian',name:'Brian Geary',title:'Chief Commercial Officer &amp; COO',email:'brian@argyle.com',li:'https://www.linkedin.com/in/brian-geary-63bb542'},
+      {first:'Audrius',name:'Audrius Zujus',title:'Co-Founder &amp; CTO',email:'audrius@argyle.com',li:'https://www.linkedin.com/in/zujus'}
+    ],
+    skipped:['Billy Marsden — former Co-Founder/COO','Christopher Hansen — former Co-Founder/CRO'],
+    notes:[]
+  }
+];
+
+var out='';
+data.forEach(function(co){
+  var ems=co.contacts.map(function(c){return mailto(c.email,c.first,co.name,co.ind,co.desc);});
+  var lis=co.contacts.map(function(c){return c.li;});
+  var eJ=he(JSON.stringify(ems));
+  var lJ=he(JSON.stringify(lis));
+
+  out+='<h2><a href="'+he(co.url)+'" target="_blank">'+co.name+'</a>&nbsp; <small>'+co.ind+' &mdash; '+co.desc+'</small></h2>';
+  out+='<div class="bulk">';
+  out+='<button onclick="oa('+eJ+')">Open all emails ('+ems.length+')</button>';
+  out+='<button onclick="oa('+lJ+')">Open all LinkedIn ('+lis.length+')</button>';
+  out+='</div>';
+  out+='<table><tr><th>Name</th><th>Title</th><th>Email</th><th>Links</th></tr>';
+  co.contacts.forEach(function(c){
+    var m=he(mailto(c.email,c.first,co.name,co.ind,co.desc));
+    var l=he(c.li);
+    out+='<tr>';
+    out+='<td>'+c.name+'</td>';
+    out+='<td>'+c.title+'</td>';
+    out+='<td><a href="'+m+'">'+c.email+'</a></td>';
+    out+='<td><a href="'+m+'" title="Open email draft">&#128231;</a>&nbsp;&nbsp;<a href="'+l+'" target="_blank" title="LinkedIn">&#128188;</a></td>';
+    out+='</tr>';
+  });
+  out+='</table>';
+  if(co.skipped.length){
+    out+='<div class="skipped"><b>Skipped:</b> '+co.skipped.join('; ')+'</div>';
+  }
+  co.notes.forEach(function(n){
+    out+='<div class="note">&#9888; '+n+'</div>';
+  });
+});
+
+document.currentScript.insertAdjacentHTML('afterend',out);
+</script>
+</body>
+</html>
